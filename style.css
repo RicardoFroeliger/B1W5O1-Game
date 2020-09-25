@@ -1,18 +1,17 @@
 body, html {
     height: 100%;
     width: 100%;
-}
-body {
-    background-image: url('./images/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 50%;
     margin: 0;
 }
+#background {
+    background: url('images/teamavatar.png') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
 
 
 
-h1.center {
+.center {
     text-align: center;
     font-family: 'Noto Sans JP', sans-serif;
     
@@ -21,7 +20,7 @@ h1.center {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-h1#startH1 {
+h1#strokeText {
     -webkit-text-stroke: 2px black;
     color: white;
     font-size: 40px;
@@ -38,27 +37,25 @@ h1#chooseElementWarn {
     color: red;
     font-size: 22px; 
 }
-
-
-/* h1.elementText {
-    color: red;
+h1.elementText {
+    color: black;
 }
-h1#waterText {
+h1.waterElementText {
     top: 32%;
-    left: 42%;
+    left: 27%;
 }
-h1#earthText {
+h1.earthElementText {
     top: 32%;
-    left: 58%;
+    left: 73%;
 }
-h1#fireText {
+h1.fireElementText {
     top: 62%;
-    left: 42%;
+    left: 27%;
 }
-h1#airText {
+h1.airElementText {
     top: 62%;
-    left: 58%;
-} */
+    left: 73%;
+}
 
 
 
@@ -68,14 +65,17 @@ input.button {
     cursor: pointer;
     background: linear-gradient(to right, #66ff33, #00ff77); 
     border: solid white;
+    outline: none;
 
     font-size: 35px;
     font-weight: bold;
+    text-align: center;
     font-family: 'Noto Sans JP', sans-serif;
     color: black;
     position: absolute;
 }
 input.startButton {
+    background: linear-gradient(to right, #66ff33, #00ff77); 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -86,7 +86,6 @@ input.startButton:hover {
     height: 92px;
     font-size: 38px;
 }
-
 input.elementButton {
     width: 150px;
     height: 150px;
@@ -101,49 +100,96 @@ input.elementButton:hover {
     padding: 5px;
     width: 165px;
     height: 165px;
-    display: block;
 }
-input.water {
+input.waterElementButton {
     top: 35%;
     left: 42%;
 }
-input.earth {
+input.earthElementButton {
     top: 35%;
     left: 58%;
 }
-input.fire {
+input.fireElementButton {
     top: 65%;
     left: 42%;
 }
-input.air {
+input.airElementButton {
     top: 65%;
     left: 58%;
 }
-
-
-
-
-.outer {
-    width: 150px;
-    height: 150px;
-    background-image: url('images/water.png');
-    background-repeat: no-repeat;
-    background-size: 150px 150px;
-    background-position-x: 5%;
-    background-position-y: 50%;
+input.choiceButton {
+    font-size: 30px; 
 }
-.inner {
-    width: 150px;
-    height: 150px;
-    display: none;
-    cursor: pointer;
+input.choiceButton:hover {
+    border: 5px solid white;
+    width: 275px;
+    height: 92px;
+    font-size: 32px;
+    z-index: 1;
 }
-.text {
-    line-height: 150px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+input.leftChoiceButton {
+    top: 50%;
+    left: 35%;
+    transform: translate(-35%, -50%);
 }
-.outer:hover .inner{
-    display: inline-block;
+input.rightChoiceButton {
+    top: 50%;
+    left: 65%;
+    transform: translate(-65%, -50%);
+}
+input.centerChoiceButton {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%); 
+}
+input.findAangButton {
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    
+    outline: none;
+    cursor: auto;
+    background: transparent; 
+    border: none;
+    
+    top: 60%;
+    left: 75%;
+    transform: translate(-75%, -50%);
+}
+
+
+
+
+input#waterChoice1Left {
+    background: radial-gradient(white 40%, #71a6d2 75%);
+}
+input#waterChoice1Right {
+    background: linear-gradient(to bottom, #71a6d2, #0059b3);
+}
+input#waterChoice2LeftTowards {
+    background: linear-gradient(to bottom, #c6efff, #5b73b4);
+}
+input#waterChoice2RightTowards {
+    background: linear-gradient(to top, #e79aff, #b148d2);
+}
+input#waterChoice2LeftFishing {
+    background: linear-gradient(to bottom, red, darkred);
+}
+input#waterChoice2RightFishing {
+    background: linear-gradient(to bottom, white, grey);
+}
+input#waterChoice3LeftBreak {
+    background: linear-gradient(to bottom, red, darkred);
+}
+input#waterChoice3RightBreak {
+    background: linear-gradient(to bottom, white, grey);
+}
+input#waterChoice3CenterBreak {
+    background: linear-gradient(to bottom, #FAD672, #F49547);
+}
+input#waterChoice3LeftRun {
+    background: linear-gradient(to bottom, red, darkred);
+}
+input#waterChoice3RightRun {
+    background: linear-gradient(to bottom, white, grey);
 }

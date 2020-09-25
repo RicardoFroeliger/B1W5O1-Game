@@ -4,31 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Four Elements</title>
-        <script src="script.js"></script>
+
+        <script src="javascript/storyline-functions.js"></script>
+        <script src="javascript/technical-functions.js"></script>
+        <script src="javascript/paths/water.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <h1 class="center" id="startH1">Welcome to Four Elements</h1>
+    <body id="background">
+        <h1 class="center" id="strokeText">Welcome to Four Elements</h1>
         <input type="button" value="Start Game" onclick="choosePath()" class="button startButton" 
             id="startButton" onmouseover="toggleColor(true)" onmouseout="toggleColor(false)">
-        <!-- <input type="image" src='images/ozai.gif' class="button startButton"> -->
-        <div class="outer" onclick="console.log('hi')">
-            <div class="inner" onclick="console.log('hi')">
-                <h1 class="text">Earth</h1>
-            </div>
-        </div>
     </body>
 </html>
-
-
-<!-- // element.onmouseover = function() { 
-    //     let typeText = document.createElement('H1'); 
-    //     typeText.id = `${type}Text`;  typeText.style.color = 'white';
-    //     typeText.appendChild(document.createTextNode(type.capitalize())); 
-    //     document.body.appendChild(typeText); 
-
-    //     console.log('test');
-    // };
-    // element.onmouseout = function() { 
-    //     let typeText = document.getElementById(`${type}Text`);
-    //     typeText.parentNode.removeChild(typeText); }; -->
