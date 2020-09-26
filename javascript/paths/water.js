@@ -24,7 +24,7 @@ function waterPath() {
                 editH2('You see someone frozen in the iceberg!<br>What will you do?');
                 createButton('Break the ice', 'waterChoice2LeftTowards', 'button, choiceButton, leftChoiceButton', 'break');
                 createButton('Get the F* out', 'waterChoice2RightTowards', 'button, choiceButton, rightChoiceButton', 'run');
-            }, 5000);
+            },  speed * 5000);
 
         };
         if(path[2] === 'break') {
@@ -55,12 +55,12 @@ function waterPath() {
                                         createButton('Attack', 'waterChoice3LeftBreak', 'button, choiceButton, leftChoiceButton', 'attack');
                                         createButton('Surrender', 'waterChoice3RightBreak', 'button, choiceButton, rightChoiceButton', 'surrender');  
                                         createButton('Find Aang', 'waterChoice3CenterBreak', 'button, choiceButton, centerChoiceButton', 'aang');                   
-                                    }, 5000);   
-                                }, 5000);
-                            }, 7000);
-                        }, 5000);
-                    }, 3000);
-                }, 5000);
+                                    }, speed * 5000);   
+                                }, speed * 5000);
+                            }, speed * 7000);
+                        }, speed * 5000);
+                    }, speed * 3000);
+                }, speed * 5000);
 
             };
             if(path[3] === 'attack') {
@@ -82,11 +82,11 @@ function waterPath() {
                                 editH2('But it is too late.. Many of the Water Tribe people have been killed or seriously injured.');
                                 setTimeout(() => {
                                     gameover('waterStory');
-                                }, 7500);
-                            }, 7500);
-                        }, 5000);
-                    }, 5000);
-                }, 5000);
+                                }, speed * 7500);
+                            }, speed * 7500);
+                        }, speed * 5000);
+                    }, speed * 5000);
+                }, speed * 5000);
 
             } else if(path[3] === 'surrender') {
 
@@ -106,11 +106,11 @@ function waterPath() {
                                 editH2('You fly away with Aang, escaping the Fire Nation.');
                                 setTimeout(() => {
                                     gamewon('waterStory');
-                                }, 5000);
-                            }, 5000);
-                        }, 5000);
-                    }, 5000);
-                }, 10000);
+                                }, speed * 5000);
+                            }, speed * 5000);
+                        }, speed * 5000);
+                    }, speed * 10000);
+                }, speed * 5000);
 
             } else if(path[3] === 'aang') {
 
@@ -137,7 +137,7 @@ function waterPath() {
                             editH2('You found Aang just in time!<br>Aang helps you fight off the Fire Nation.');
                             setTimeout(() => {
                                 gamewon('waterStory');
-                            }, 5000);
+                            }, speed * 5000);
 
                         } else {
 
@@ -146,11 +146,11 @@ function waterPath() {
                             editH2('You didn\'t find Aang in time!<br>You return to your village and see everything on fire.');
                             setTimeout(() => {
                                 gameover('waterStory');
-                            }, 5000);
+                            }, speed * 5000);
 
                         };
-                    }, 5000);
-                }, 5000);
+                    }, 5000); // MUST HAVE NO SPEED APPLIED, ALWAYS 5SEC!!!
+                }, speed * 5000);
 
             };
 
@@ -171,9 +171,9 @@ function waterPath() {
                             editH2('The Fire Navy ship is approaching.<br>Will you attack or surrender to the Fire Nation?');
                             createButton('Attack', 'waterChoice3LeftRun', 'button, choiceButton, leftChoiceButton', 'attack');
                             createButton('Surrender', 'waterChoice3RightRun', 'button, choiceButton, rightChoiceButton', 'surrender');
-                        }, 5000);
-                    }, 5000);
-                }, 5000);
+                        }, speed * 5000);
+                    }, speed * 5000);
+                }, speed * 5000);
 
             };
             if(path[3] === 'attack') {
@@ -186,8 +186,8 @@ function waterPath() {
                     editH2('But you fail. The Fire Nation easily outdoes you.');
                     setTimeout(() => {
                         gameover('waterStory');
-                    }, 5000);
-                }, 5000);
+                    }, speed * 5000);
+                }, speed * 5000);
 
             } else if(path[3] === 'surrender') {
 
@@ -197,7 +197,7 @@ function waterPath() {
                 deleteElement('waterChoice3LeftRun'); deleteElement('waterChoice3RightRun');
                 setTimeout(() => {
                     gameover('waterStory');
-                }, 5000);
+                }, speed * 5000);
 
             };
 
@@ -218,8 +218,8 @@ function waterPath() {
                     editH2('The Fire Navy ship is approaching.<br>Will you attack or surrender to the Fire Nation?');
                     createButton('Attack', 'waterChoice2LeftFishing', 'button, choiceButton, leftChoiceButton', 'attack');
                     createButton('Surrender', 'waterChoice2RightFishing', 'button, choiceButton, rightChoiceButton', 'surrender');
-                }, 5000);
-            }, 5000);
+                }, speed * 5000);
+            }, speed * 5000);
 
         };
         if(path[2] === 'attack') {
@@ -232,8 +232,8 @@ function waterPath() {
                 editH2('But you fail. The Fire Nation easily outdoes you.');
                 setTimeout(() => {
                     gameover('waterStory');
-                }, 5000);
-            }, 5000);
+                }, speed * 5000);
+            }, speed * 5000);
 
         } else if(path[2] === 'surrender') {
 
@@ -243,7 +243,7 @@ function waterPath() {
             deleteElement('waterChoice2LeftFishing'); deleteElement('waterChoice2RightFishing');
             setTimeout(() => {
                 gameover('waterStory');
-            }, 5000);
+            }, speed * 5000);
             
         };
 

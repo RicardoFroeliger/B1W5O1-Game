@@ -1,3 +1,5 @@
+let speed = 0.5; // 1 = default,  0.5 = quick read,  0.01 = skip story text
+
 /* Triggers When Start Button Is Clicked */
 function choosePath() {
     /* Clears Color Interval & Deletes Start Button */
@@ -39,7 +41,7 @@ function startGame(type) {
     /* Starts Storyline */
     setTimeout(() => {
         startStoryline(type);
-    }, 1000);
+    }, speed * 1000);
 };
 
 
@@ -54,7 +56,9 @@ function startStoryline(type) {
         createElement('h1', 'intro', 'center, intro');
         let intro = document.getElementById('intro');
         intro.style.color = 'white'; intro.style.top = '40%';
-        intro.appendChild(document.createTextNode(`You wake up as an ${type} bender..`)); 
+        let introA = 'a';
+        if(type === 'air' || type === 'earth') introA = 'an';
+        intro.appendChild(document.createTextNode(`You wake up as ${introA} ${type} bender..`)); 
         
         setTimeout(() => {
 
@@ -96,10 +100,10 @@ function startStoryline(type) {
                 deleteElement('introDesc');
                 setTimeout(() => {
                     buttonClicked('', true);
-                }, 3000);
-            }, 10000);
-        }, 5000);
-    }, 2000);
+                }, speed * 3000);
+            }, speed * 10000);
+        }, speed * 5000);
+    }, speed * 2000);
 };
 
 
@@ -119,8 +123,8 @@ function buttonClicked(pathPush, skipPush) {
 /* Triggers When Called Inside Path Function */
 function gameover(id) {
     if(id) deleteElement(id);
-    createElement('h1', 'startH1', 'center');
-    let gameover = document.getElementById('startH1');
+    createElement('h1', 'strokeText', 'center');
+    let gameover = document.getElementById('strokeText');
     gameover.style.color = 'white';
     gameover.style.top = '50%';
     gameover.appendChild(document.createTextNode('GAME OVER')); 
@@ -132,8 +136,8 @@ function gameover(id) {
 /* Triggers When Called Inside Path Function */
 function gamewon(id) {
     if(id) deleteElement(id);
-    createElement('h1', 'startH1', 'center');
-    let gamewon = document.getElementById('startH1');
+    createElement('h1', 'strokeText', 'center');
+    let gamewon = document.getElementById('strokeText');
     gamewon.appendChild(document.createTextNode('Congratulations you won the water path!')); 
     setBackground('url(images/avatarState.png)')
 };
