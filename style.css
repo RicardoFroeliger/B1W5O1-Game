@@ -9,8 +9,6 @@ body, html {
     background-position: 50% 50%;
 }
 
-
-
 .center {
     text-align: center;
     font-family: 'Noto Sans JP', sans-serif;
@@ -25,39 +23,6 @@ h1#strokeText {
     color: white;
     font-size: 40px;
 }
-h1#chooseElement {
-    top: 10%;
-    -webkit-text-stroke: 2px black;
-    color: white;
-    font-size: 35px; 
-}
-h1#chooseElementWarn {
-    top: 85%;
-    -webkit-text-stroke: 1px black;
-    color: red;
-    font-size: 22px; 
-}
-h1.elementText {
-    color: black;
-}
-h1.waterElementText {
-    top: 32%;
-    left: 27%;
-}
-h1.earthElementText {
-    top: 32%;
-    left: 73%;
-}
-h1.fireElementText {
-    top: 62%;
-    left: 27%;
-}
-h1.airElementText {
-    top: 62%;
-    left: 73%;
-}
-
-
 
 input.button {
     width: 250px;
@@ -85,37 +50,6 @@ input.startButton:hover {
     width: 275px;
     height: 92px;
     font-size: 38px;
-}
-input.elementButton {
-    width: 150px;
-    height: 150px;
-    display: block;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    outline: none;
-}
-input.elementButton:hover {
-    background: white;
-    border-radius: 10%;
-    padding: 5px;
-    width: 165px;
-    height: 165px;
-}
-input.waterElementButton {
-    top: 35%;
-    left: 42%;
-}
-input.earthElementButton {
-    top: 35%;
-    left: 58%;
-}
-input.fireElementButton {
-    top: 65%;
-    left: 42%;
-}
-input.airElementButton {
-    top: 65%;
-    left: 58%;
 }
 input.choiceButton {
     font-size: 30px; 
@@ -156,9 +90,6 @@ input.findAangButton {
     left: 75%;
     transform: translate(-75%, -50%);
 }
-
-
-
 
 input#waterChoice1Left {
     background: radial-gradient(white 40%, #71a6d2 75%);

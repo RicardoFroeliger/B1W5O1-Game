@@ -3,14 +3,12 @@ function waterPath() {
 
     if(path.length == 1) {
 
-        setBackground('url(images/water/iceberg.png)');
+        setBackground('url(images/iceberg.png)');
         createElement('h2', 'waterStory', 'center');
         let waterStoryH2 = document.getElementById('waterStory');
-        waterStoryH2.style.color = 'white';
         waterStoryH2.appendChild(document.createTextNode('You\'re out at sea catching some fish until you suddenly see a big glowing iceberg.\nWhat are you going to do?')); 
         createButton('Go towards it', 'waterChoice1Left', 'button, choiceButton, leftChoiceButton', 'towards');
         createButton('Continue fishing', 'waterChoice1Right', 'button, choiceButton, rightChoiceButton', 'fishing');                
-        document.getElementById('waterStory').style.color = 'black';
 
     };
     if(path[1] === 'towards') {
@@ -20,11 +18,11 @@ function waterPath() {
             editH2('You are sailing towards the giant glowing iceberg.'); 
             deleteElement('waterChoice1Left'); deleteElement('waterChoice1Right');
             setTimeout(() => {
-                setBackground('url(images/water/aangIceberg.png)');
+                setBackground('url(images/aangIceberg.png)');
                 editH2('You see someone frozen in the iceberg!<br>What will you do?');
                 createButton('Break the ice', 'waterChoice2LeftTowards', 'button, choiceButton, leftChoiceButton', 'break');
                 createButton('Get the F* out', 'waterChoice2RightTowards', 'button, choiceButton, rightChoiceButton', 'run');
-            },  speed * 5000);
+            }, speed * 5000);
 
         };
         if(path[2] === 'break') {
@@ -38,7 +36,7 @@ function waterPath() {
                 setTimeout(() => {
                     editH2('*THE ICE BURSTS*');
                     setTimeout(() => {
-                        setBackground('url(images/water/lightbeam.png)');
+                        setBackground('url(images/lightbeam.png)');
                         document.getElementById('waterStory').style.color = 'black';
                         editH2('A bright light appears and blinds you for a few seconds.');
                         setTimeout(() => {
@@ -48,7 +46,7 @@ function waterPath() {
                                 document.getElementById('waterStory').style.color = 'white';
                                 editH2('You have a conversation in which you find out his name is Aang.');
                                 setTimeout(() => {
-                                    setBackground('url(images/water/blackSnow.png)');
+                                    setBackground('url(images/blackSnow.png)');
                                     editH2('Suddenly you see black snow snowing from the sky.<br>You rush back to your village!');
                                     setTimeout(() => {
                                         editH2('A Fire Navy ship is approaching.<br>Will you attack or surrender to the Fire Nation?');
@@ -99,7 +97,7 @@ function waterPath() {
                     setTimeout(() => {
                         editH2('Aang uses some airbending moves and frees you from the Fire Nation soldiers!');
                         setTimeout(() => {
-                            setBackground('url(images/water/snowbending.png)');
+                            setBackground('url(images/snowbending.png)');
                             document.getElementById('waterStory').style.color = 'black';
                             editH2('Aang bends the snow off an iceberg right onto the Fire Nation ship!');
                             setTimeout(() => {
@@ -122,7 +120,7 @@ function waterPath() {
                     editH2('You don\'t much time!<br>Click Aang before the timer runs out! (5sec)');
                     
                     document.getElementById('waterStory').style.color = 'black';
-                    setBackground('url(images/water/aang.png)');
+                    setBackground('url(images/aang.png)');
 
                     let foundAang = false;
                     createElement('input', 'findAangButton', 'button, findAangButton');
@@ -165,7 +163,7 @@ function waterPath() {
                 setTimeout(() => {
                     editH2('You return to your village, terrified of what you just saw.');
                     setTimeout(() => {
-                        setBackground('url(images/water/blackSnow.png)');
+                        setBackground('url(images/blackSnow.png)');
                         editH2('Suddenly black snow starts to snow from the sky.<br>A Fire Navy ship is on their way.');
                         setTimeout(() => {
                             editH2('The Fire Navy ship is approaching.<br>Will you attack or surrender to the Fire Nation?');
@@ -212,7 +210,7 @@ function waterPath() {
             editH2('You return to your village with a whole lot of fish.');
             deleteElement('waterChoice1Left'); deleteElement('waterChoice1Right');
             setTimeout(() => {
-                setBackground('url(images/water/blackSnow.png)');
+                setBackground('url(images/blackSnow.png)');
                 editH2('Suddenly black snow starts to snow from the sky.<br>A Fire Navy ship is on their way.');
                 setTimeout(() => {
                     editH2('The Fire Navy ship is approaching.<br>Will you attack or surrender to the Fire Nation?');

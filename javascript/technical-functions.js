@@ -3,8 +3,6 @@ String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase(); 
 };
 
-
-
 /* Toggles Color Cycle Of Start Button */
 function toggleColor(bool) {
     let colorIndex = 0;
@@ -21,39 +19,6 @@ function toggleColor(bool) {
     };
 };
 
-
-
-/* Creates Element Buttons */
-function createElementButtons(type) {
-    let element = document.createElement('input');  
-    element.type = 'image'; 
-    element.src = `images/${type}.png`;
-    element.id = `${type}Button`; 
-    element.classList.add('elementButton', `${type}ElementButton`);
-    element.onclick = function() { 
-        path.push(type); startGame(type); 
-    }; 
-    element.onmouseenter = function() {
-        let typeText = document.createElement('h1'); 
-        typeText.id = `${type}Text`;
-        typeText.classList.add('center', 'elementText', `${type}ElementText`);
-        typeText.appendChild(document.createTextNode(type.capitalize())); 
-        document.body.appendChild(typeText); 
-    };
-    element.onmouseleave = function() {
-        let typeText = document.getElementById(`${type}Text`); 
-        typeText.parentNode.removeChild(typeText);
-    };
-    document.body.appendChild(element);
-};
-/* Deletes Element Buttons */
-function deleteElementButtons(type) {
-    let element = document.getElementById(`${type}Button`);
-    element.parentNode.removeChild(element);
-};
-
-
-
 /* Creates Button */
 function createButton(btnContent, btnId, btnClass, pathPush) {
     let element = document.createElement('input');
@@ -67,8 +32,6 @@ function createButton(btnContent, btnId, btnClass, pathPush) {
     document.body.appendChild(element);
 };
 
-
-
 /* Creates Basic Element */
 function createElement(elemType, elemId, elemClass) {
     let element = document.createElement(elemType);
@@ -79,6 +42,7 @@ function createElement(elemType, elemId, elemClass) {
     };
     document.body.appendChild(element);
 };
+
 /* Deletes Any Element */
 function deleteElement(id) {
     let element = document.getElementById(id);
